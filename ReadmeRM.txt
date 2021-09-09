@@ -18,3 +18,5 @@ The data is sourced from IHS Enerdeq which includes:
 In addition, EUR (estimated ultimate recocery) & well spacing data have been calculated to include in the analysis/machine learning model.  
 
 ### Machine Learning Model
+
+TBD
