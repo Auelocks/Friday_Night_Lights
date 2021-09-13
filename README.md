@@ -20,5 +20,3 @@ In addition, EUR (estimated ultimate recocery) & well spacing data have been cal
 ### Machine Learning Model
 
 A linear regression model is used to investigate the relationships between well data features and the estimated ultimate recovery for gases and oils in the Permian basin data.
-
-TBD
