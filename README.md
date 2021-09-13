@@ -12,11 +12,13 @@ For decades, scientists and engineers have studied the complex geology, reservoi
 ### Database
 
 The data is sourced from IHS Enerdeq which includes:
-  (1) well data: API number (unique identifier), surface & bottom-hole location (x/y coordinates), lease name, operator, landing zone, etc.
-  (2) completion data: lateral length (ft), fluid volume (bbls), & proppant weight (lbs). 
+  1. well data: API number (unique identifier), surface & bottom-hole location (x/y coordinates), lease name, operator, landing zone, etc.
+  2. completion data: lateral length (ft), fluid volume (bbls), & proppant weight (lbs). 
 
 In addition, EUR (estimated ultimate recocery) & well spacing data have been calculated to include in the analysis/machine learning model.  
 
 ### Machine Learning Model
+
+A linear regression model is used to investigate the relationships between well data features and the estimated ultimate recovery for gases and oils in the Permian basin data.
 
 TBD
