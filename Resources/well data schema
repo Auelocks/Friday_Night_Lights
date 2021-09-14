@@ -1,6 +1,6 @@
 -- creating tables for well data
 Create Table well_data (
-	well_id BIGINT NOT Null,
+	well_id VARCHAR NOT Null,
 	Lease_name VARCHAR(50) NOT NULL,
 	well_number VARCHAR (25),
 	operator_company VARCHAR(50),
@@ -15,7 +15,7 @@ Create Table well_data (
 	Date_completed DATE,
 	Total_fluid BIGINT,
 	Total_proppant BIGINT,
-	Well_spacing BIGINT,
+	Well_spacing DECIMAL,
 	Well_name VARCHAR,
 	fluid BIGINT,
 	prop BIGINT,
