@@ -1,0 +1,19 @@
+-- creating table for well distance
+Create Table well_distance (
+	well_id VARCHAR NOT Null,
+	well_name VARCHAR, 
+	Landing_zone VARCHAR(50),
+	Surf_lat DECIMAL,
+	Surf_long DECIMAL,
+	BH_lat DECIMAL,
+	BH_long DECIMAL,
+	MP_lat DECIMAL,
+	MP_long DECIMAL,
+	Left_well VARCHAR,
+    Right_well VARCHAR,
+	Left_dist DECIMAL,
+    Right_dist DECIMAL,
+    Final_dist DECIMAL,
+	PRIMARY KEY (well_id),
+	UNIQUE (well_id)
+);
