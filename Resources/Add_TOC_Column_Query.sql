@@ -1,0 +1,2 @@
+ALTER TABLE well_data
+ADD TOC DECIMAL;
