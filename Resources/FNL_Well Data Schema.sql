@@ -2,29 +2,27 @@
 Create Table well_data (
 	well_id VARCHAR NOT Null,
 	Lease_name VARCHAR(50) NOT NULL,
-	well_number VARCHAR (25),
 	operator_company VARCHAR(50),
 	county VARCHAR(50),
 	Landing_zone VARCHAR(50),
-	Surf_lat DECIMAL,
-	Surf_long DECIMAL,
-	BH_lat DECIMAL,
-	BH_long DECIMAL,
-	Date_spud DATE,
-	Lateral_len BIGINT,
 	Date_completed DATE,
-	Total_fluid BIGINT,
-	Total_proppant BIGINT,
+	Lateral_len DECIMAL,
+	Total_fluid DECIMAL,
+	Total_proppant DECIMAL,
 	Well_spacing DECIMAL,
-	Well_name VARCHAR,
-	fluid BIGINT,
-	prop BIGINT,
+	fluid DECIMAL,
+	prop DECIMAL,
 	avg_ppg DECIMAL,
-	oil_eur BIGINT,
-	gas_eur BIGINT,
+	oil_eur DECIMAL,
+	gas_eur DECIMAL,
+	isopach DECIMAL,
+	porosity DECIMAL,
+	sw DECIMAL,
+	TVD DECIMAL,
+	FVF DECIMAL,
 	PRIMARY KEY (well_id),
 	UNIQUE (well_id)
-	
+
 );
 
 SELECT * FROM well_data;
