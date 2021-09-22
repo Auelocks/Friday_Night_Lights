@@ -16,8 +16,8 @@ Use machine learning to determine key factors for successfully producing wells i
 ### Python Code
 - MB_WellDistCalc.ipynb - Python code for calculating well spacing from lat-long data
 - Permian_ML_Model_OHE_NL_RF_Corr - Python code that contains the final machine learning models
-- Permian_ML_Model_OHE_KMeans_RockType - Python code that uses K-means algorithm for determining rock type from geologic inputs
-- Permian_ML_Model_Latest_With_RockType - Python code that incorporates rock type calulcted from K-means into the machine learning model
+- Permian_KMeans_RockType - Python code that uses K-means algorithm for determining rock type from geologic inputs
+- Permian_ML_Model_Incorporating_RockType - Python code that incorporates rock type calulcted from K-means into the machine learning model
 
 ### Input Data
 - Resources\FNL_DataSet_For_Import.csv - File with most of the data inputs
