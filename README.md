@@ -45,13 +45,15 @@ Data for the project is sourced from IHS Enerdeq which includes:
 
 Well spacing was calculated using lat-long data with a separate Python code developed for this purpose.
 
+All static data is stored using PostgreSQL where tables are imported from CSV files and joined into a primary table with all well data using the unique well id.
+
 
 ## Machine Learning Model
 ### Model Overview
 The independent variable list is made up of several continuous numeric variables and at least two categorcial variables. The dependent variable (EUR) is a continuous variable. Based on an assessment of the dataset, the team chose to start with a multiple linear regression (MLR) model. The goal of MLR is to model the linear relationship between the independent variables and one or more dependent response variables. 
 
 ### Data Cleaning
-The team followed a structured data preprocessing effort to eliminate unwanted variables (ID, names etc.) and also remove rows that did not contain key input variables or the response variable. Also, the team employed cutoffs on both input and respinse variables based on subject matter expertise. A histogram and box plot of the response variable shows a small population of outliers that were eventually eliminated. While this resulted in several rows being eliminated, the final dataset contained over 6000 rows of fully populated data. 
+The team followed a structured data preprocessing effort to eliminate unwanted variables (ID, names etc.) and also remove rows that did not contain key input variables or the response variable. Also, the team employed min and max cutoffs on both input and response variables based on professional experience and proficiency with the subject. A histogram and box plot of the response variable shows a small population of outliers that were eventually eliminated. While this resulted in several rows being eliminated, the final dataset contained over 6000 rows of fully populated data. 
 
 ![Histogram](Resources/OilRF_Histogram.png)
 
@@ -71,7 +73,7 @@ Step 4: The next step was to generate statistics and p-values on the independent
 ![OLS](Resources/OLS_Regression_Results.png)
 
 It can be seen that the p-values of most variables are less than 0.05, indicating that they are statistically significant. Some variables with high p-values were omitted in the final model. A statement in the footnote suggests multicollinearity issues based on the smallest eigen value. However, the  team was unable to determine the variables that could be the cause of this issue.
-Step 5: The next step was to create train and test datasets and run the regression model. The results  of the model are shoen below.
+Step 5: The next step was to create train and test datasets and run the regression model. The results  of the model are shown below.
 
 ![Linear Regression](Resources/Lin_Reg_Results.png)
 
@@ -83,4 +85,4 @@ The mean percentage error in the model is 43%, suggesting a poor quality dataset
 The team pursued various alternatives to encode the two categorical variables present - Landing Zone (which indicates the subsurface vertical location where the well is drilled) and County (which segregates the wells geographically). After working with a few label encoded variations, the team chose to "one-hot" encode the categorical variables.
 
 ### Other Regression Models
-A few other linear and non-linear models like Gradient Boosting and Random Forest regression were attempted in an effort to improve the data. However, the results from the original model were fouond to be in line with the other models trialed.
+A few other linear and non-linear models like Gradient Boosting and Random Forest regression were attempted in an effort to improve the data. However, the results from the original model were found to give similar results as compared the other models trialed.
