@@ -60,6 +60,7 @@ The team followed a structured data preprocessing effort to eliminate unwanted v
 ![Box Plot](Resources/OilRF_BoxPlot.png)
 
 
+
 ### Variable Selection
 Step 1: The team started by cross-plotting each of the independent variables against the response variable to observe any discernible correlation. However, the complex nature of oilfield geology and the presence of multiple explanatory variables resulted in little to no observable corerlation between variables.
 Step 2: The next step was to cross-plot independent variables against each other to ensure there are no multi-collinearity issues. Some variables were eliminated this way. For example, frac fluid volume and proppant volume were strongly correlated and hence proppant was excluded from the list (see image below).
@@ -86,3 +87,8 @@ The team pursued various alternatives to encode the two categorical variables pr
 
 ### Other Regression Models
 A few other linear and non-linear models like Gradient Boosting and Random Forest regression were attempted in an effort to improve the data. However, the results from the original model were found to give similar results as compared the other models trialed.
+
+### Dashboard
+Using Tableau public, we were able to visualize the chaotic and disorganized data set. When grouped by either EUR or landing zone , no discernable trend can be established at the state or even county view. From our histogram, we have a left skewed distribuiton just from Eur value, with correlates to industy standards/probability.
+
+[Friday Night Ligts Dashboard](https://public.tableau.com/app/profile/david.mcadoo/viz/Group9FridayNightLightsDashboard/Dashboard2?publish=yes)
