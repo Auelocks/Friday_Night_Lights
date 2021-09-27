@@ -60,6 +60,7 @@ The team followed a structured data preprocessing effort to eliminate unwanted v
 ![Box Plot](Resources/Model_Output_Images/OilRF_BoxPlot.png)
 
 
+
 ### Variable Selection
 Step 1: The team started by cross-plotting each of the independent variables against the response variable to observe any discernible correlation. However, the complex nature of oilfield geology and the presence of multiple explanatory variables resulted in little to no observable correlation between variables.
 Step 2: The next step was to cross-plot independent variables against each other to ensure there are no multi-collinearity issues. Some variables were eliminated this way. For example, frac fluid volume and proppant volume were strongly correlated and hence proppant was excluded from the list (see image below).
