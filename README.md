@@ -30,7 +30,7 @@ Other miscellaneous queries for table creation and join are also present in the 
 
 ### Dashboard and Slides Link
 - Dashboard: [Friday Night Ligts Dashboard](https://public.tableau.com/app/profile/david.mcadoo/viz/Group9FridayNightLightsDashboard/Dashboard2?publish=yes)
-
+- Slides: [FNL Slide Deck](https://docs.google.com/presentation/d/1jJQ8uUfvLbrSyeU119UbeOl3c2PDQfh82_HQJHRISkI/edit#slide=id.gf2f1268256_3_112)
 
 ## Overview
 
@@ -81,7 +81,7 @@ The mean percentage error in the model is 27%, suggesting a poor quality dataset
 
 ![Actual_Predicted](Resources/Model_Output_Images/Actual_vs_Predicted.png)
 
-Step 6: Several efforts were made to improve the model results by incorporating rock typing using K-Means clustering (see section on K-Means) as a separate variable and also building separate models for each of the different rock types.
+Step 6: Several efforts were made to improve the model results by incorporating rock typing using K-Means clustering (see section on K-Means) as a separate variable and also building separate models for each of the different rock types. However, none of these efforts seemed ot improve the model quality or output.
 
 ### Categorical Variable Treatment
 Since machine learning algorithms cannot operate directly on label data, they need to be converted into numeric data. The team pursued various alternatives to encode the two categorical variables present - Landing Zone (which indicates the subsurface vertical location where the well is drilled) and County (which segregates the wells geographically). 
@@ -91,6 +91,13 @@ The first attempt was to label encode the categorical variables. With unsatisfac
 
 #### One-Hot Encoding
 In One-Hot encoding, a binary variable is added in place of each category of the categorical variable. There were a total of 14 dummy variables created for landing zone and county.
+
+### K-Means Clustering
+Oil and gas geology follows complex patterns that are dependeent on the depositional systems that were responsible for the formation of the reservoir in question. The team used K-Means clustering to group similar "rock types" in an effort to subdivide the dataset that represents the entire basin. The rock typing was done using key variables like posority, clay volume etc. that determine how rocks vary geologically. A cluster plot of TVD vs GOR is shown below. These two key geologic variables largely influence the ultimate recovery from any given well. 
+
+![K-Means](Resources/Model_Output_Images/K_Means_Clusters.png)
+
+However, the rock type model did not yield results as expected. This was attributed to the lack of other key variables that determine rock type and the potential correlation between the variables used for rock typing and those that were used as inputs in the regression models.
 
 ### Other Regression Models
 A few other linear and non-linear models like Gradient Boosting and Random Forest regression were attempted in an effort to improve the data. However, the results from the original model were found to give similar results as compared the other models trialed.
