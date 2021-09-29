@@ -16,8 +16,10 @@ Use machine learning to determine key factors for successfully producing wells i
 ### Python Code
 - MB_WellDistCalc.ipynb - Python code for calculating well spacing from lat-long data
 - Permian_ML_Model_OHE_NL_RF_Corr - Python code that contains the final machine learning models
-- Permian_ML_Model_OHE_KMeans_RockType - Python code that uses K-means algorithm for determining rock type from geologic inputs
+- Permian_ML_Model_KMeans_RockType - Python code that uses K-means algorithm for determining rock type from geologic inputs
 - Permian_ML_Model_Latest_With_RockType - Python code that incorporates rock type calulcted from K-means into the machine learning model
+- Random_Forest_Optimized - Python code that tests RandomForestRegressor as the machine learning model, with code to attempt to optimize parameters and cross validation
+- Permian_ML_Model_Latest_With_RockType - Python code that tests GradientBoostingRegressor as the machine learning model with code to attempt to optimize parameters
 
 ### Input Data
 - Resources\FNL_DataSet_For_Import.csv - File with most of the data inputs
@@ -85,4 +87,7 @@ The mean percentage error in the model is 43%, suggesting a poor quality dataset
 The team pursued various alternatives to encode the two categorical variables present - Landing Zone (which indicates the subsurface vertical location where the well is drilled) and County (which segregates the wells geographically). After working with a few label encoded variations, the team chose to "one-hot" encode the categorical variables.
 
 ### Other Regression Models
-A few other linear and non-linear models like Gradient Boosting and Random Forest regression were attempted in an effort to improve the data. However, the results from the original model were found to give similar results as compared the other models trialed.
+Other linear and non-linear models like Gradient Boosting and Random Forest regression were attempted in an effort to improve the data. However, the results of the new models gave similar results when accuracy scores were compared with the original linear regression model.  The model with the best Coefficient of Determination (also named Accuracy Score in code) was the Random Forest with parameters set at default values.
+
+### Cross Validation
+Because the model was not performing well after several trials of checking Features and Machine Learning algorithms, cross validation was computed to check whether there was notable variability within the data.  However, it was noted that the devation between folds in a 3 and 5 fold cross validation study were not significantly different. 
