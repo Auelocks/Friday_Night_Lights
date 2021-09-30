@@ -102,10 +102,26 @@ Oil and gas geology follows complex patterns that are dependeent on the depositi
 However, the rock type model did not yield results as expected. This was attributed to the lack of other key variables that determine rock type and the potential correlation between the variables used for rock typing and those that were used as inputs in the regression models.
 
 ### Other Regression Models
-Other linear and non-linear models like Gradient Boosting and Random Forest regression were attempted in an effort to improve the model accuracy. However, the results of the new models gave similar results when accuracy scores were compared with the original linear regression model.  The model with the best Coefficient of Determination (also named Accuracy Score in code) was the Random Forest with parameters set at default values.
+Other linear and non-linear models like Gradient Boosting and Random Forest regression were attempted in an effort to improve the model accuracy. However, the results of the new models gave similar results when accuracy scores were compared with the original linear regression model.  The model with the best Coefficient of Determination (also named Accuracy Score in code) was the Random Forest with parameters set at default values which gave a final accuracy score of 0.41.
+
+![Final_Scores](Resources/Final_Scores.png)
 
 ### Cross Validation
 Because the model was not performing well after several trials of checking Features and Machine Learning algorithms, cross validation was computed to check whether there was notable variability within the data.  However, it was noted that the devation between folds in a 3 and 5 fold cross validation study were not significantly different. 
 
 ### Dashboard
-Using Tableau public, we were able to visualize the chaotic and disorganized data set. When grouped by either EUR or landing zone, no discernable trend can be established at the state or even county view. 
+Using Tableau public, we were able to visualize the chaotic and disorganized data set. When grouped by either EUR or landing zone, no discernable trend can be established at the state or even county view.
+
+## Summary and Next Steps
+A machine learning model was built for the Midland Basin area
+     - Key variables that drive well performance were identified
+     - Relationship between each of the different variables was determined to eliminate redundant variables
+     - Multiple ML models were tested
+
+Model performs well (<15% average error) at EUR range observed with current completion trends
+     - Lower EURs driven by very short laterals (no longer drilled) and small completions (Pre-2015)
+     - However, model can be improved by incorporating additional performance drivers (geomechanics and completion parameters)
+
+Future work to improve model
+     - Source private data to compare against available public data
+     - Identify geologic trends to group wells or subdivide dataset into smaller chunks
